@@ -1,0 +1,23 @@
+{
+  "name": "@lxndr/react-webui",
+  "version": "1.0.0-alpha.1",
+  "description": "Simple Web Widgets",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "lxndr",
+  "license": "ISC",
+  "dependencies": {
+    "classnames": "^2.2.5",
+    "lodash": "^4.17.5",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.40",
+    "@babel/preset-env": "^7.0.0-beta.40",
+    "core-decorators": "^0.20.0",
+    "grunt": "^1.0.2"
+  }
+}
