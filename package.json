@@ -2,10 +2,7 @@
   "name": "@lxndr/react-webui",
   "version": "1.0.0-alpha.1",
   "description": "Simple Web Widgets",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "webpack": "src/index.js",
   "author": "lxndr",
   "license": "ISC",
   "dependencies": {
