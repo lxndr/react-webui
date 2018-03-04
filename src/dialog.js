@@ -22,7 +22,7 @@ export class Dialog extends React.PureComponent {
       <Modal show={show} backdropClassName="overlay-backdrop">
         <div className={cn('overlay-dialog', className)}>
           {title && <div className="dialog-header">{title}</div>}
-          <div className="dialog-content">{children}</div>
+          <div className="dialog-body">{children}</div>
         </div>
       </Modal>
     );
