@@ -28,9 +28,7 @@ export class Form extends React.PureComponent {
   }
 
   render() {
-    <React.Fragment>
-      {this.props.children}
-    </React.Fragment>
+    return this.props.children;
   }
 
   @autobind

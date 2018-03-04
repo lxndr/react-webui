@@ -1,0 +1,11 @@
+parser: babel-eslint
+
+extends:
+  - xo-space/esnext
+  - xo-react/space
+
+env:
+  browser: true
+
+rules:
+  react/button-has-type: off
