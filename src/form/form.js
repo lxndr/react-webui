@@ -3,7 +3,7 @@ import {autobind} from 'core-decorators';
 import React from 'react';
 import PropTypes from 'prop-types';
 
-export class Form extends React.PureComponent {
+export class Form extends React.Component {
   static propTypes = {
     value: PropTypes.any.isRequired,
     onChange: PropTypes.func.isRequired,

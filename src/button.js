@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import cn from 'classnames';
 
-export class Button extends React.PureComponent {
+export class Button extends React.Component {
   static propTypes = {
     type: PropTypes.string,
     label: PropTypes.string,

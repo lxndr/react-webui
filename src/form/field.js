@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import cn from 'classnames';
 import {autobind} from 'core-decorators';
 
-export class Field extends React.PureComponent {
+export class Field extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     name: PropTypes.string.isRequired,

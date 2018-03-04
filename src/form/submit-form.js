@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {autobind} from 'core-decorators';
 import {Form} from './form';
 
-export class SubmitForm extends React.PureComponent {
+export class SubmitForm extends React.Component {
   static propTypes = {
     onSubmit: PropTypes.func.isRequired
   }

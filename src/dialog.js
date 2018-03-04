@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import {Modal} from 'react-overlays';
 import cn from 'classnames';
 
-export class Dialog extends React.PureComponent {
+export class Dialog extends React.Component {
   static propTypes = {
     className: PropTypes.string,
     title: PropTypes.node,
