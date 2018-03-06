@@ -42,11 +42,16 @@ export class Field extends React.Component {
     };
 
     if (typeof type === 'string') {
-      Component = 'input';
-      props.type = type;
+      if (type === 'textarea') {
+        Component = 'textarea';
+        delete props.type;
+      } else {
+        Component = 'input';
+        props.type = type;
+      }
     }
 
-    if (Component === 'input') {
+    if (Component === 'input' || Component === 'textarea') {
       if (props.type === 'checkbox') {
         if (rest.value) {
           props.id += '_' + rest.value;
