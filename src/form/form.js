@@ -19,6 +19,10 @@ export class Form extends React.Component {
     form: PropTypes.object
   }
 
+  _nextValue = null
+
+  _delay = null
+
   getChildContext() {
     const {value, readOnly} = this.props;
 
@@ -27,14 +31,34 @@ export class Form extends React.Component {
     };
   }
 
+  componentWillUnmount() {
+    if (this._delay) {
+      clearImmediate(this._delay);
+      this._delay = null;
+    }
+  }
+
   render() {
     return this.props.children;
   }
 
   @autobind
   handleChange(key, value) {
-    const model = _.cloneDeep(this.props.value);
-    _.set(model, key, value);
-    this.props.onChange(model);
+    if (!this._nextValue) {
+      this._nextValue = _.cloneDeep(this.props.value);
+    }
+
+    _.set(this._nextValue, key, value);
+
+    if (this._delay) {
+      return;
+    }
+
+    /* Might not be the right way to do this */
+    this._delay = setImmediate(() => {
+      this.props.onChange(this._nextValue);
+      this._delay = null;
+      this._nextValue = null;
+    });
   }
 }
