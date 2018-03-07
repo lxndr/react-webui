@@ -37,6 +37,7 @@ export class Field extends React.Component {
 
     const props = {
       id: name,
+      name,
       readOnly: readOnly || form.readOnly,
       onChange: this.handleChange
     };
@@ -59,6 +60,8 @@ export class Field extends React.Component {
         } else {
           props.checked = value || false;
         }
+      } else if (props.type === 'radio') {
+        props.checked = value == rest.value;
       } else {
         props.value = value || '';
       }
@@ -97,6 +100,10 @@ export class Field extends React.Component {
           }
         } else {
           value = target.checked;
+        }
+      } else if (target.type === 'radio') {
+        if (target.checked) {
+          value = target.value;
         }
       } else {
         value = target.value;
