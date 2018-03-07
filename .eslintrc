@@ -9,3 +9,4 @@ env:
 
 rules:
   react/button-has-type: off
+  react/jsx-sort-props: off
